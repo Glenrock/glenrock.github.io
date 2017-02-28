@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Fixed headers - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage fixed header and footer." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />examp
+	<style>
+	/* BG images */
+	#section0{
+		background-image: url(imgs/bg3.jpg);
+
+	}
+	#section1{
+		background-image: url(imgs/bg1.jpg);
+}
+	#section2{
+		background-image: url(imgs/bg4.jpg);	E
+	}
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+		text-shadow: 0 0 3px #707070;
+	
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Fixed header.
+	* --------------------------------------- */
+	#header{
+		position:fixed;
+		height: 30px;
+		display:block;
+		width: 100%;
+		background: #333;
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 10px 50px 10px 0 ;
+	}
+
+	#header{
+		top:0px;
+	}
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu {
+		bottom: 80px;
+	}
+	#infoMenu li a {
+		color: #fff;
+		z-index: 999;
+	}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#C63D0F', '#ffffff', '#7E8F7C'],
+				css3: true
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+
+<div id="header"><form id="button1" action="https://www.facebook.com/Glenrock-Glass-238211513307436/?__mref=message_bubble">
+    <input type="submit" value="Glenrock Glass FaceBook" />
+</form>
+
+</div>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>GLENROCK GLASS</h1>
+			<p>Taste the whiskey, not the glass</p>
+		</div>
+	</div>
+	<div class="section" id="section1">
+			<div><p style="font-size: 39px; font-family: arial,helvetica;width: 52%; margin: 80px; text-shadow: 0 0 3px #707070; color: #ffffff; padding: 80px 0 0 0; text-align: left;">Fine spirits isn't all there is to it - glass matters. Glenrock glass is dealkalized using reactive sulphur for a cleaner taste. Glenrock - take your whiskey or bourbon to the next level in taste</p></div>
+
+
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Enjoy it</h1>
+			<p>Models, Order, contact links</p>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
